@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    
+    <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                font-family: Arial, sans-serif;
+            }
+            .fixed-top {
+                display:inline-flex;
+               
+			    top: 0; /* 距离顶部0 */
+			    left: 4%; /* 距离左侧0 */
+			    width: 100%; /* 宽度设置为100% */
+			    background-color: grey; /* 背景颜色 */
+			    height:60px;
+			  
+			    position:fixed;
+			    z-index: 1000;
+			     width:93%;
+			    align-items:center;
+
+		}
+			.box-gps {       
+		        width: 9%;
+		        height: 100%;
+		        background-color: none;
+		        position: relative;
+		        color:white;
+		    	text-align:center;
+		        font-size:19px;
+		        letter-spacing:0px;
+		    }
+		
+		    .box-gps::after {
+		        content: '';
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 100%;
+		        height: 3px;
+		        background-color: white;
+		        transform: scaleX(0);
+		        transition: transform 0.3s;
+		    }
+		
+		    .box-gps:hover::after {
+		        transform: scaleX(1);
+		    }
+
+
+        .t1 {
+             margin-left:11%;
+            font-family: "楷体";
+            color: white;
+            border: 3px solid white;
+            font-weight:21;
+            padding: 8px;
+            font-size:20px;
+            height:30px;
+            width:7%;
+            height:40%;
+     
+            
+        }
+                
+            .container {
+		            width: 92%; /* 设置容器的固定宽度 */
+		            margin: 0 auto; /* 水平居中 */
+		             background-color: white; /* 背景颜色 */
+		             padding: 0px; /* 内边距 */
+		           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加一些阴影效果 */
+		}
+		            .fixed-green-bar {
+		            top: 0;
+		            left: 0;
+		            width: 100%;
+		            height: 450px;
+		            background-color: #F9F7E8;
+		            display: flex;
+		            padding-right: 10px;
+		        }
+		        
+		        
+		            .container1 {
+            width: 70%;
+            height: 90%;
+            overflow: hidden;
+            position: relative;
+        }
+		        .d1, .d2 {
+		          
+		            display: flex; /* d2 初始不显示，将通过JavaScript控制 */
+		        }
+		        .d2 {
+		            display: none; /* 初始时不显示d2 */
+		        }
+		        .t3t2 {
+		            margin-left: 14%;
+		            margin-top: 155px;
+		        }
+		        .t2 {
+		            color: #61BFAD;
+		            width: 340px;
+		            font-size: 20px;
+		            line-height: 1.5;
+		        }
+		        .t3 {
+		            font-size: 30px;
+		            color: #61BFAD;
+		            font-weight: 2000;
+		        }
+		        .t3t2t {
+		            margin-left: 11%;
+		            margin-top: 139px;
+		        }
+		        .t2t {
+		            color: #61BFAD;
+		            width: 360px;
+		            font-size: 20px;
+		            line-height: 1.5;
+		        }
+		        .t3t {
+		            font-size: 30px;
+		            color: #61BFAD;
+		            font-weight: 2000;
+		        }
+
+		        img {
+		            cursor: pointer; /* 让用户知道图标是可以点击的 */
+		        }
+		        
+		      .hidden{
+            display: none;
+        }
+	        @keyframes slide{
+	            0% {left: 0;}
+	            50% {left: 100%;}
+	            51% {left: -100%;}
+	            100% {left: 0;}
+	        }
+        .slide{
+            animation: slide 1s;
+         }
+		        
+		       
+            .content {
+                margin-top: 160px; /* 上方固定面板高度 + 间距 */
+                height: 2000px;
+                padding: 20px;
+            }
+            .hs{
+            width:100%;
+            height:130px;
+            top:480px;
+            left:0;
+            opacity:0.8;
+            display: flex;
+            padding-right: 10px;
+            }
+            .hs1{
+          
+            background-color: rgba(97, 191, 173, 0.5);
+            left:0;
+            width:49.8%;
+            display: flex;
+           align-items: center; 
+            }
+            .hs1:hover {
+		     background-color: rgba(97, 191, 173, 0.4);
+		}
+            .hs2{
+         
+            background-color: rgba(97, 191, 173, 0.5);
+            width:49.8%;
+            align-items: center; 
+             display: flex;
+            }
+            
+            .hs2:hover{
+       
+            background-color:rgba(97, 191, 173, 0.4);
+            }
+            .hs3text{
+          
+            align-items:center;
+            text-align:left;
+            text-decoration: none;
+            color:grey;
+            margin-left:5%;
+            line-height: 0.5;
+            }
+            
+            
+            .b1{
+       
+            background-color:white;
+            width:0.25%;
+            
+            }
+            .b2{
+             background-color: rgba(97, 191, 173, 0.5);
+             width:19%;
+             
+            }
+             .custom-line {
+            width:80%;
+            height:1px;
+            top:650px;
+            left:10%;
+            background-color:grey;
+            display: flex;
+              margin: 0 auto;
+             }
+            /*首页分界线1*/
+            .intro1{
+            margin:0 auto;
+            width:75%;
+            text-indent:2em;
+            }
+            
+           .img-line{
+           display:inline-flex;
+           width:75%;
+           margin:0 auto;
+           }
+            
+            /*介绍1分界线*/
+/*        简介background */
+          .intro2-bg{
+          background-color:rgba(139, 214, 121, 0.18);
+            padding: 0px; /* 内边距 */
+            
+		   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          }
+               
+       
+      .detail{
+        left:25%;
+    }
+        .detail2 {
+            left: 25%;
+        }
+
+        .clothes-text1 {
+            width: 40%;
+            left: 39%;
+          
+        }
+
+        .closthes-text2 {
+            margin: 0 auto;
+            width: 76%;
+            left: 25%;
+        }
+
+        .clue1 {
+          margin-left:20%;
+            background-color: rgba(139, 214, 121, 0.4);
+            border-radius: 60%;
+            height: 60px;
+            display: table-cell;
+        vertical-align: middle;
+            color: white;
+            width: 10%;
+            
+        }
+
+        .wordandimage {
+            display: flex;
+     justify-content: center; /* 水平居中对齐 */
+      align-items: center; 
+        }
+        
+        .yuyue{
+        background:#E8E8E8;
+        padding: 5px; /* 内边距 */
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .intro2-line{
+          width:25%;
+          height:0.7px;
+          top:650px;
+          border-top: 2px dashed #B8B8B8;
+          display: flex;
+          }
+        .sup{
+         margin-left:9%;
+	     justify-content: center; /* 水平居中对齐 */
+	     align-items: center; 
+	     width:82%;
+	     padding:1%;
+	     
+
+        }
+        .hezuo{
+        
+        margin:0 auto;
+        background:#666;
+        justify-content:center;
+        padding:7px;
+        
+        }
+        .hezuo-line{
+          width:19%;
+          top:650px;
+          border-top: 1px dashed white;
+          display: flex;
+          }      
+        .huibao{
+         justify-content: center; /* 水平居中对齐 */
+	     align-items: center; 
+       
+         display:flex;
+        color:#5D5D5D;
+        font-size:20px;
+        letter-spacing: 0.3px;
+        }
+        .ch {
+            display: block;
+        }
+      
+        .en {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="fixed-top">
+<img src="gongsi.png" alt="gongsi1" width=165px style="margin-left:150px">
+
+  <a href="home.html" class="box-gps"style="text-decoration:none;margin-left:18.8%;">
+        <p style="margin-top:18px">首页</p>
+        </a>
+       <a href="home" class="box-gps"style="text-decoration:none;margin-left:-3px;">
+        <p style="margin-top:18px">关于我们</p>
+        </a>  
+        <a href="huishou.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">旧衣回收处</p>
+        </a> 
+         <a href="in.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">时尚再生坊</p>
+        </a> 
+         <a href="Login.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+      <p style="margin-top:18px">注册/登录</p>
+        </a> 
+        <a href="home_en.html"><img src="fanyi.png" alt="翻译" onclick="switchLanguage()" style="width:50px;margin-left:1%"></a>
+   </div>
+ 
+     <div class="container">
+           
+        <div class="fixed-green-bar">
+            <a class="toggle-icon" href="javascript:void(0);" style="margin-left:13%;margin-top:230px">
+                <img src="tb1.png" alt="图标" width="50px" height="70">
+            </a>
+            <div class="container1">
+                <div class="d1">
+                    <div class="t3t2t">   
+                        <div class='t3t' style="font-weight:bold">探索绿色生活的无限可能</div><br>
+                        <div class="t2t">「璞素计划」让每件二手之物焕发新生。在这里，我们用AI技术重新定义二手产品的价值，让环保不再是选择，而是一种自然而然的生活方式。加入我们，让每一次轻松的交易都成为守护地球的行动，共同缔造一个资源循环、环境友好的未来。</div>
+                    </div>
+                    <img src="logo.png" alt="logo" width="600" height="450" style="margin-top:3%;margin-left:-1%">
+                </div>
+                    
+                <div class="d2">
+                    <div class="t3t2">   
+                        <div class='t3' style="font-weight:bolder">点亮旧物新生命</div><br>
+                        <div class="t2">回收旧衣旧物，创意再生，从中国到世界。让闲置物品焕发新生，变废为宝。不以爱心温暖感动，以商业智慧赋予新生命。将您的旧衣物售予我们，共同开创独特精美的未来。</div>
+                    </div>
+                    <img src="p7.png" alt="logo1" width="450" height="450" style="margin-top:2.5%;margin-left:2%;">
+                </div>
+                                
+            </div>
+         
+          <a class="toggle-icon" href="javascript:void(0);" style="margin-right:8%;margin-top:230px">
+                <img src="tb2.png" alt="图标" width="50px" height="70">
+            </a>
+        </div>
+          
+          
+               <div class="hs">
+        <div class="b2"></div>    
+        
+        <div class="b1"></div>
+   
+        <a href="huishou.html" class="hs1" style="text-decoration:none;">
+        <img src="buytb.png" alt="buytb" width="75" height="75" style="margin-left:17%">
+        <div class="hs3text">
+        <p style="font-size:28px;font-weight:bolder;">以"旧"</p>
+        <p style="font-size:21px;font-weight:bold">旧衣回收站，延续时尚生命</p>
+        </div>
+        </a>
+        
+        <div class="b1"></div>
+        
+          <a href="in.html" class="hs2"style="text-decoration:none;">
+        <img src="selltb.png" alt="selltb" width="75" height="75"style="margin-left:17%">
+          <div class="hs3text">
+        <p style="font-size:28px;font-weight:bolder;">换"新"</p>
+        <p style="font-size:21px;font-weight:bold">转变时尚态度，重塑旧衣风采</p>
+        </div>
+        </a>  
+        <div class="b1"></div>
+    
+        <div class="b2"></div>
+    </div>
+    <br>
+     <div class="custom-line"></div><br<<br>
+    <div class="intro1">
+    <h1 style="text-align:center;color:#494949;">「璞素计划」</h1>
+    <h3 style="color:#686868;line-height:1.7;">欢迎来到璞素计划，我们致力于回收和再利用旧衣物和生活用品，通过精心加工和注入创意，让它们焕发新生，成为独具魅力的精品。加入我们，共同创造一个资源循环、环境友好的未来，让每一件物品都散发着独特的价值和温暖！</h3><br>
+    </div>
+    <img src="intro-1-1.png" alt="intro1-1" width="15.5%" style="margin-right:4%;margin-left:20%">
+    
+    <img src="intro1-2.png" alt="intro1-2" width="15.5%" style="margin-right:4%">
+   
+    <img src="intro1-3.png" alt="intro1-3" width="15.5%" >
+   
+    
+
+
+<div class="intro2-bg"><br>
+<div class="detail">
+    <div class="closthes-text2">
+       <h1 style="margin-left:5px;color:rgba(38, 38, 38, 0.892);text-align:center">您的旧衣物何去何从？</h1>
+       
+       <div class="wordandimage">
+<div class="intro2-line" style="margin-right:13px"></div>  <h3 style="margin-left:5px;color:rgba(38, 38, 38, 0.892);font-size:20px;text-align:center">Where Do Your Old Clothes Go?</h3>
+<div class="intro2-line" style="margin-left:13px"></div></div>
+
+       
+      
+        <h3 style="color:rgba(38, 38, 38, 0.7);margin-left:40px;font-size:25px;"><img src="tb3.png" width="20">   从您的衣橱到世界</h3>
+        <div class="wordandimage">
+            <img src="p1.png" alt="黑人买衣服image" width="55%"  style="margin-left:30px">
+            <p style="margin-left:30px;margin-top:30px;line-height:1.9;color:rgba(38, 38, 38, 0.7);font-size:20px;text-indent:2em;">您卖出的旧衣服将被送往全球各地，并在那里得到二次利用。这不仅有助于减少废物，还能为那些需要帮助的人提供衣物支持。
+                我们坚信保护地球对每个人都至关重要。通过将旧衣服送往非洲，我们积极推动可持续发展，在全球范围内践行环保理念。您的卖出不仅改变了他人的生活，也为我们共同的家园带来了一份珍贵的希望。
+                在这个美丽的地球上，每一个环保举措都汇聚成为守护生态的力量。我们希望您能继续支持我们的环保倡议，让我们共同为绿色地球努力。
+
+            </p>
+        </div>
+        <br>
+
+        <br><br>
+       
+        
+        <h3 style="color:rgba(38, 38, 38, 0.7);margin-left:40px;font-size:25px;"><img src="tb3.png" width="20">   AI创新，旧衣物重生</h3>
+        
+        <p style="margin-left:35px;margin-top:8px;font-size:20px;line-height:1.9;text-indent:2em;color:rgba(38, 38, 38, 0.7);">  在这个充满关注环境和可持续发展的时代，我们不仅致力于改变现状，更积极探索未来。通过结合人类智慧与先进AI技术，我们将回收的旧衣物转化为令人惊叹的艺术品和时尚产品，让每一件衣物都焕发新生命。这些经过精心设计和创意加工的产品，将再次走向全球舞台，传递着环保与可持续的理念。让我们携手共创绿色未来，让每一次购物都成为对地球的爱的投资，为美丽的明天助力!</p>
+         <div class="wordandimage">
+                <img src="p5.png" width="95%" style="margin-left:2.5%">   
+        </div><br>
+     
+       
+      <br><br> 
+  </div> 
+</div>
+</div>
+
+<!-- 上门预约流程 --><br>
+ <h1 style="text-align:center;color:#494949;">旧衣新用途！上门回收，一键预约！</h1>
+<div class="wordandimage">
+<div class="intro2-line" style="margin-right:13px"></div> 
+<h3 style="color:#848484">EASY RECYCLE: FREE PICKUP, BOOK NOW</h3>
+<div class="intro2-line" style="margin-left:13px"></div></div>
+<br>
+<img src="yuyue.png" alt="yueyue-logo" width="82%" style="margin-left:9%;">
+
+<br>
+      <br><br> 
+ <div class="intro2-bg"><br>
+<h1 style="margin-left:5px;color:rgba(38, 38, 38, 0.892);text-align:center">旧衣物带给您的惊喜与回报</h1>
+       
+  <div class="wordandimage">
+<div class="intro2-line" style="margin-right:13px"></div> 
+<h3 style="margin-left:5px;color:rgba(38, 38, 38, 0.892);text-align:center">Renewed Possibilities: What Your Old Clothes Can Get You</h3>
+<div class="intro2-line" style="margin-left:13px"></div>
+</div>
+
+<!-- 以上是“惊喜与回报”部分的标题 -->
+<div class="sup">
+
+
+<div class="huibao">
+<img src="tbtb1.png" alt="tbtb4" width="8%" height="8%" style="margin-left:0.%">
+<p style="line-height:1.6;font-weight:bold;width:70%;margin-left:2%">高回收价值:<br>每吨旧衣回收价值高达2000元，让您的旧衣物有了实际的经济回报</p>
+</div>
+
+<div class="huibao">
+<img src="tbtb2.png" alt="tbtb4" width="8%" height="8%"style="margin-left:0.%">
+<p style="line-height:1.6;font-weight:bold;width:70%;margin-left:2%">环保先锋证:<br>我们为您颁发绿色环保证书，见证您的环保贡献，让时尚与责任并行。</p>
+</div>
+
+
+<div class="huibao">
+<img src="tbtb3.png" alt="tbtb4" width="8%" height="8%"style="margin-left:0.%">
+<p style="line-height:1.6;font-weight:bold;width:70%;margin-left:2%">定期礼物赠送:<br>作为VIP客户，我们将定期赠送经过AI二次加工的精美衣物作为礼物，让您感受到我们的诚意和关怀!</p>
+</div>
+
+
+
+<div class="huibao">
+<img src="tbtb4.png" alt="tbtb4" width="8%"height="8%" style="margin-left:0.%">
+<p style="line-height:1.6;font-weight:bold;width:70%;margin-left:2%">设计坊特权:<br>作为VIP用户，您将有机会进入我们的设计坊，亲自参与AI定制衣物的设计过程，打造属于您独一无二的时尚风格。</p>
+</div>
+<br>
+
+</div>
+
+<!-- 合作公司 -->
+<div class="hezuo">
+
+<h2 style="color:#E8E8E8;text-align:center;">合作伙伴</h2>
+<div class="wordandimage">
+<div class="hezuo-line" style="margin-right:13px"></div> 
+<h3 style="margin-left:5px;color:#E8E8E8;text-align:center">Renewed Possibilities: What Your Old Clothes Can Get You</h3>
+<div class="hezuo-line" style="margin-left:13px"></div>
+</div><br>
+<img src="gongsi_logo1.png" alt="公司logo1"  width="35%" style="margin-left:15%">
+<img src="gongsi_logo2.png" alt="公司logo1"  width="30.5%"style="margin-left:4%">
+
+<br><br><br>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+ 
+     
+        document.addEventListener('DOMContentLoaded', function () {
+            var isD1Visible = true; // 初始显示d1
+        
+            var toggleIcons = document.querySelectorAll('.toggle-icon');
+            toggleIcons.forEach(function(icon) {
+                icon.addEventListener('click', function() {
+                    if (isD1Visible) {
+                        document.querySelector('.d1').style.display = 'none';
+                        document.querySelector('.d2').style.display = 'flex';
+                        isD1Visible = false;
+                    } else {
+                        document.querySelector('.d1').style.display = 'flex';
+                        document.querySelector('.d2').style.display = 'none';
+                        isD1Visible = true;
+                    }
+                });
+            });
+        
+            setInterval(function() {
+                var d1 = document.querySelector('.d1');
+                var d2 = document.querySelector('.d2');
+        
+                if (isD1Visible) {
+                    d1.style.display = 'none';
+                    d2.style.display = 'flex';
+                    isD1Visible = false;
+                } else {
+                    d1.style.display = 'flex';
+                    d2.style.display = 'none';
+                    isD1Visible = true;
+                }
+            }, 4000); // 自动切换间隔时间，这里设定为3秒
+        });
+    document.addEventListener('DOMContentLoaded', function() {
+        const clothesHeader = document.getElementById('clothesHeader');
+        const itemHeader = document.getElementById('itemHeader');
+        const detailContent = document.querySelector('.detail');
+        const detail2Content = document.querySelector('.detail2');
+
+        // 初始化状态显示 detail 内容
+        detailContent.style.display = 'block';
+        detail2Content.style.display = 'none';
+
+        // 点击衣服时显示 detail 内容
+        clothesHeader.addEventListener('click', function() {
+            detailContent.style.display = 'block';
+            detail2Content.style.display = 'none';
+        });
+
+        // 点击物品时显示 detail2 内容
+        itemHeader.addEventListener('click', function() {
+            detailContent.style.display = 'none';
+            detail2Content.style.display = 'block';
+        });
+    });
+</script>
+</body>
+</html>
+
