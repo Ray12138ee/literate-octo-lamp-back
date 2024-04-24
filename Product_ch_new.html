@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+     <style>
+    
+    .fixed-top {
+                display:inline-flex;
+               
+			    top: 0; /* 距离顶部0 */
+						    width: 100%; /* 宽度设置为100% */
+			    background-color: grey; /* 背景颜色 */
+			    height:60px;
+			  
+			    position:fixed;
+			    z-index: 1000;
+			     width%;
+			    align-items:center;
+
+		}
+			.box-gps {       
+		        width: 9%;
+		        height: 100%;
+		        background-color: none;
+		        position: relative;
+		        color:white;
+		    	text-align:center;
+		        font-size:19px;
+		        letter-spacing:0px;
+		    }
+		
+		    .box-gps::after {
+		        content: '';
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 100%;
+		        height: 3px;
+		        background-color: white;
+		        transform: scaleX(0);
+		        transition: transform 0.3s;
+		    }
+		
+		    .box-gps:hover::after {
+		        transform: scaleX(1);
+		    }
+.image-on-top {
+    position: absolute; /* 或使用 fixed 或 sticky */
+    top:-50px;
+    left: 230px;
+    z-index: 10; 
+    /* 较大的值确保图片在最上层 */
+  }
+    
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>    
+            
+	<script type="text/javascript" src="js/lrscroll_1.js"></script>   
+     
+    
+	<script type="text/javascript" src="js/n_nav.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/ShopShow.css" />
+    <link rel="stylesheet" type="text/css" href="css/MagicZoom.css" />
+    <script type="text/javascript" src="js/MagicZoom.js"></script>
+    
+    <script type="text/javascript" src="js/num.js">
+    	var jq = jQuery.noConflict();
+    </script>
+        
+    <script type="text/javascript" src="js/p_tab.js"></script>
+    
+    <script type="text/javascript" src="js/shade.js"></script>
+    
+</head>
+<body>  
+
+<div class="fixed-top">
+<img src="images/logo_new.png" alt="gongsi1" width=100px style="margin-left:150px">
+<a href="home_ch.html" class="box-gps"style="text-decoration:none;margin-left:23.8%;">
+        <p style="margin-top:18px">首页</p>
+        </a>
+       <a href="home_ch.html" class="box-gps"style="text-decoration:none;margin-left:-3px;">
+        <p style="margin-top:18px">关于我们</p>
+        </a>  
+        <a href="huishou.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">旧衣回收处</p>
+        </a> 
+         <a href="index_ch.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">时尚再生坊</p>
+        </a> 
+         <a href="Register_ch.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+      <p style="margin-top:18px">注册/登录</p>
+        </a> 
+        <a href="Product_ch.html">
+        <img src="fy.png" alt="翻译" onclick="switchLanguage()" style="width:50px;margin-left:1%"></a>
+        
+   </div>
+
+<!--Begin Header Begin-->
+<div class="soubg">
+	<div class="sou">
+    
+        <span class="fr" style="margin-top:-10px;font-size:16px"><br<br><br><br>
+        	<span class="fl">你好，请<a href="Login.html">登录</a>&nbsp; <a href="Regist.html" style="color:rgba(97, 191, 173, 0.7);">免费注册</a>&nbsp;|&nbsp;<a href="Member.html">我的订单</a>&nbsp;|</span>
+        	<span class="ss">
+            	<div class="ss_list">
+                	<a href="#">收藏夹</a>
+                    
+                </div>
+                <div class="ss_list">
+                	<a href="#">客户服务</a>
+                   
+                </div>
+               
+            </span> 
+        </span>
+    </div>
+</div>
+<div class="top">
+    <div class="logo"><img src="p/gongsi.png"  width="358" class="image-on-top"></div>
+    
+    <div class="search">
+    	<form>
+        	<input type="text" value="" class="s_ipt" />
+            <input type="submit" value="搜索" class="s_btn" />
+        </form>            
+                  
+        <span class="fl"><a href="#">2024上新</a><a href="#">旧衣批量购买</a><a href="#">夏季服装</a><a href="#">T恤</a><a href="#">日用品</a><a href="#">连衣裙</a></span>
+    </div>
+    
+    <div class="i_car">
+    	<div class="car_t">购物车 [ <span>0</span> ]</div>
+        <div class="car_bg">
+       		<!--Begin 购物车未登录 Begin-->
+        	<div class="un_login">还未登录！<a href="Login.html" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>
+    
+        </div>
+    </div>
+</div>
+<!--Begin Menu Begin-->
+<div class="menu_bg">
+	<div class="menu">
+    	<!--Begin 商品分类详情 Begin-->    
+    	<!--Begin 商品分类详情 Begin-->    
+    	<div class="nav1">
+        	<div class="nav_t">全部商品分类</div>
+            <div class="leftNav">
+                <ul>      
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav1.png" /></span>
+                            <span class="fl">上衣</span>
+                        </div>
+                        <div class="zj">
+                            <div class="zj_l">
+                                <div class="zj_l_c">
+                                    <h2>款式分类</h2>
+                                    <a href="#">短袖T恤</a>|<a href="#">长袖T恤</a>|<a href="#">衬衫</a>|<a href="#">毛衣</a>|<a href="#">卫衣</a>|
+                                    <a href="#">马甲</a>|<a href="#">短外套</a>|<a href="#">长外套</a>|<a href="#">运动外套</a>|
+                                </div>
+                                <div class="zj_l_c">
+                                    <h2>领型分类</h2>
+                                    <a href="#">圆领</a>|<a href="#">v领</a>|<a href="#">方领</a>|<a href="#">高领</a>|<a href="#">领结衬衫</a>|
+                                    <a href="#">领口衬衫</a>
+                                </div>
+                                <div class="zj_l_c">
+                                    <h2>季节分类</h2>
+                                    <a href="#">春夏款</a>|<a href="#">秋冬款</a>|<a href="#">全季款</a>
+                                   
+                                </div>
+                               
+                                <div class="zj_l_c">
+                                    <h2>主色系</h2>
+                                    <a href="#">白色</a>|<a href="#">黑色</a>|<a href="#">红色</a>|<a href="#">绿色</a>|<a href="#">蓝色</a>|
+                                    <a href="#">黄色</a>|<a href="#">灰色</a>|<a href="#">黄色</a>|<a href="#">粉色</a>|<a href="#">紫色</a>|
+                                    <a href="#">多彩款</a>
+                                <div class="zj_l_c">
+                                    <h2>尺码</h2>
+                                    <a href="#">XS</a>|<a href="#">S</a>|<a href="#">M</a>|<a href="#">L</a>|<a href="#">XL</a>|
+                                    <a href="#">XXL</a>|<a href="#">XXXL</a>|<a href="#">特殊尺码</a>
+                                   
+                                </div>
+                            </div>
+<!--                             <div class="zj_r"> -->
+<!--                                 <a href="#"><img src="images/n_img1.jpg" width="236" height="200" /></a> -->
+<!--                                 <a href="#"><img src="images/n_img2.jpg" width="236" height="200" /></a> -->
+<!--                             </div> -->
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav2.png" /></span>
+                            <span class="fl">下装</span>
+                        </div>
+                        <div class="zj" style="top:-40px;">
+                            <div class="zj_l">
+                                <div class="zj_l_c">
+                                    <h2>裤子</h2>
+                                    <a href="#">牛仔裤</a>|<a href="#">休闲裤</a>|<a href="#">运动裤</a>|<a href="#">西裤</a>|<a href="#">短裤</a>|
+                                    <a href="#">长裤</a>|<a href="#">阔腿裤</a>|
+                                </div>
+                                <div class="zj_l_c">
+                                    <h2>裙子</h2>
+                                    <a href="#">A字裙</a>|<a href="#">蕾丝裙</a>|<a href="#">半身裙</a>|<a href="#">长裙</a>|<a href="#">短裙</a>|
+                                    <a href="#">包臀裙</a>|<a href="#">荷叶边裙</a>
+                                </div>
+                                
+                                    <div class="zj_l_c">
+                                    <h2>季节分类</h2>
+                                    <a href="#">春夏款</a>|<a href="#">秋冬款</a>|<a href="#">全季款</a>
+                                   
+                                </div>
+                                    <div class="zj_l_c">
+                                    <h2>长度分类</h2>
+                                    <a href="#">长裤</a>|<a href="#">九分裤</a>|<a href="#">七分裤</a>|<a href="#">短裤</a>
+                                </div>
+                                 <div class="zj_l_c">
+                                    <h2>风格分类</h2>
+                                    <a href="#">修身款</a>|<a href="#">直筒裤</a>|<a href="#">阔腿款</a>|<a href="#">高腰款</a><a href="#">中腰款</a>
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav3.png" /></span>
+                            <span class="fl">连衣裙</span>
+                        </div>
+                        <div class="zj" style="top:-80px;">
+                            <div class="zj_l">
+                                <div class="zj_l_c">
+                                    <h2>款式</h2>
+                                   <a href="#">包臀裙</a>|<a href="#">荷叶边裙</a>|<a href="#">迷你裙</a>|<a href="#">及膝裙</a>
+                                </div>
+                                
+                                   <div class="zj_l_c">
+                                    <h2>领型</h2>
+                                   <a href="#">圆领</a>|<a href="#">V领</a>|<a href="#">方领</a>|<a href="#">高领</a>
+                                </div>
+                                
+                                   <div class="zj_l_c">
+                                    <h2>风格</h2>
+                                  <a href="#">简约风</a>|<a href="#">甜美风</a>|<a href="#">摩登风</a>|<a href="#">民族风</a>|
+ 
+                                </div>
+                                
+                                   <div class="zj_l_c">
+                                    <h2>尺码</h2>
+                                   <a href="#">XS</a>|<a href="#">S</a>|<a href="#">M</a>|<a href="#">L</a>|<a href="#">XL</a>
+                                </div>
+                                
+                                  
+                            </div>
+                       
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav4.png" /></span>
+                            <span class="fl">女装&男装</span>
+                        </div>
+                        <div class="zj" style="top:-120px;">
+                            <div class="zj_l">
+                                <div class="zj_l_c">
+                         
+                             <div class="zj_l_cc">
+                             <br>
+                                    <a href="#" style="font-size:20px;">男装</a>
+                                    <a href="#" style="font-size:20px">女装</a>  
+                                    <br>                                 
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </li>
+                 
+                    
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav7.png" /></span>
+                            <span class="fl">箱包</span>
+                        </div>
+                        <div class="zj" style="top:-240px;">
+                            <div class="zj_l">
+                                <div class="zj_l_c">
+                                    <h2>背包</h2>
+                                    <a href="#">运动包</a>|
+                                    <a href="#">单肩包</a>|
+                                    <a href="#">双肩包</a>|
+                                    <a href="#">斜挎包</a>|
+                                    <a href="#">腰包</a>|
+                                    <a href="#">公文包</a>|
+                                    <a href="#">健身包</a>|
+                                   
+                                </div>
+                                
+                                <div class="zj_l_c">
+                                    <h2>手袋</h2>
+                                    <a href="#">腋下包</a>|
+                                    <a href="#">托特包</a>|
+                                    <a href="#">单肩包</a>|
+                                    <a href="#">手提包</a>|
+                                    <a href="#">手拿包</a>|
+                                   
+                                </div>
+                                 <div class="zj_l_c">
+                                    <h2>旅行系列</h2>
+                                    <a href="#">洗漱包</a>|
+                                    <a href="#">化妆包</a>|
+                                    <a href="#">旅行包</a>|
+                                    <a href="#">收纳包 </a>|
+                                    <a href="#">拉杆箱</a>|
+                                </div>
+                            </div>
+                           
+                           
+                    </li>
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav8.png" /></span>
+                            <span class="fl">配饰</span>
+                       
+                    </li>
+                   
+                    <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav10.png" /></span>
+                            <span class="fl">百货</span>
+                        </div>
+                        
+                    </li>             
+                     <li>
+                    	<div class="fj">
+                        	<span class="n_img"><span></span><img src="images/nav9.png" /></span>
+                            <span class="fl">旧衣批量购买</span>
+                        </div>
+                  
+                    </li>                           	
+                </ul>            
+            </div>
+        </div>  
+        <!--End 商品分类详情 End-->                                               
+    <ul class="menu_r">                                                                                                                                               
+        	<li><a href="in.html">首页</a></li>
+            <li><a href="#">服装</a></li>
+             <li><a href="#">配饰</a></li>
+             <li><a href="#">箱包</a></li>
+            <li><a href="#">旧衣批量购买 </a></li>
+             <li style="width:100px"><a href="#">春季上新</a></li>
+        </ul>
+        
+    </div>
+</div>
+<!--End Menu End--> 
+<div class="i_bg"><div class="dd1">
+	<div class="postion">
+    	<span class="fl">全部 > 连衣裙 > 风格 > 简约风 > 「热销爆款」简约风纯白设计感连衣裙
+    </div>    
+    <div class="content">
+    	                    
+        <div id="tsShopContainer">
+        
+            <div id="tsImgS"><a href="p/product7.png" title="Images" class="MagicZoom" id="MagicZoom"><img src="p/product7.png" width="390" height="390" /></a></div>
+            <div id="tsPicContainer">
+                <div id="tsImgSArrL" onclick="tsScrollArrLeft()"></div>
+                <div id="tsImgSCon">
+                    <ul>
+                        <li onclick="showPic(0)" rel="MagicZoom" class="tsSelectImg"><img src="p/product7.png" tsImgS=""p/product7.png" width="79" height="79" /></li>
+                        <li onclick="showPic(1)" rel="MagicZoom"><img src="p/p1.png" tsImgS="p/p1.png" width="79" height="79" /></li>
+                        <li onclick="showPic(2)" rel="MagicZoom"><img src="p/p2.png" tsImgS="p/p2.png" width="79" height="59" /></li>
+                        <li onclick="showPic(3)" rel="MagicZoom"><img  src="p/p3.png" tsImgS="p/p3.png" width="79" height="79" /></li>
+                       
+                    </ul>
+                </div>
+                <div id="tsImgSArrR" onclick="tsScrollArrRight()"></div>
+            </div>
+            <img class="MagicZoomLoading" width="16" height="16" src="images/loading.gif" alt="Loading..." />				
+        </div>
+        
+        <div class="pro_des">
+        	<div class="des_name">
+            	<p>「热销爆款」优雅白纱 简约风 纯白 设计感连衣裙</p>
+                “时尚至上，纯白设计感，优雅白纱连衣裙"
+            </div>
+            <div class="des_price">
+            	商品价格：<b>￥139</b>
+            </div>
+            <div class="des_choice">
+            	<span class="fl">型号选择：</span>
+                <ul>
+                	<li class="checked">S<div class="ch_img"></div></li>
+                    <li>M<div class="ch_img"></div></li>
+                    <li>L<div class="ch_img"></div></li>
+                </ul>
+            </div>
+            <div class="des_choice">
+            	<span class="fl">颜色选择：</span>
+                <ul>
+                	
+                    <li class="checked">白色<div class="ch_img"></div></li>
+                  
+                </ul>
+            </div>
+            <div class="des_share">
+            	<div class="d_sh">
+                	分享
+                    <div class="d_sh_bg">
+                    	<a href="#"><img src="p/sh_1.gif" /></a>
+                        <a href="#"><img src="p/sh_2.gif" /></a>
+                        <a href="#"><img src="p/sh_3.gif" /></a>
+                        <a href="#"><img src="p/sh_4.gif" /></a>
+                        <a href="#"><img src="p/sh_5.gif" /></a>
+                    </div>
+                </div>
+                <div class="d_care"><a onclick="ShowDiv('MyDiv','fade')">关注商品</a></div>
+            </div>
+            <div class="des_join">
+            	<div class="j_nums">
+                	<input type="text" value="1" name="" class="n_ipt" />
+                    <input type="button" value="" onclick="addUpdate(jq(this));" class="n_btn_1" />
+                    <input type="button" value="" onclick="jianUpdate(jq(this));" class="n_btn_2" />   
+                </div>
+                <span class="fl"><img src="p/j_car.png" height="60px" style="margin-top:-7px"/></a></span>
+            </div>            
+        </div>    
+        
+        </div>
+        
+        
+    </div>
+    <div class="content mar_20">
+    	<div class="l_history">
+        	<div class="fav_t">猜您喜欢</div>
+        	<ul>
+            	<li>
+                    <div class="img"><a href="#"><img src="p/cai1.png" width="155" height="162"style="margin-left:8%" /></a></div>
+                	<div class="name"><a href="#">未来感纯白百褶连衣短裙</a></div>
+                    <div class="price">
+                    	<font>￥<span>99.00</span></font> 
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><a href="#"><img src="p/cai2.png" width="155" height="162"style="margin-left:8%" /</a></div>
+                	<div class="name"><a href="#">「AI严选👍」简约白T恤</a></div>
+                    <div class="price">
+                    	<font>￥<span>79.00</span></font> 
+                    </div>
+                
+       
+        	</ul>
+        </div>
+            <div class="des_border">
+                <div class="des_tit">
+                	<ul>
+                    	<li class="current"><a href="#p_attribute">商品属性</a></li>
+                        <li><a href="#p_details">商品详情</a></li>
+                        <li><a href="#p_comment">商品评论</a></li>
+                    </ul>
+                </div>
+                <div class="des_con" id="p_attribute">
+                	
+                	<table border="0" align="center" style="width:100%; font-family:'宋体'; margin:10px auto;" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>商品名称：优雅白纱设计感连衣裙</td>
+                        <td>商品编号：xxxxxxx</td>
+                        <td>上架时间：2024.3.15 </td>
+                      </tr>
+                      <tr>
+                        <td>商品毛重：160.00g</td>
+                        <td>商品产地：中国</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>型号：S/M/L </td>
+                        <td>类型：女装-简约风—连衣裙</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>                                               
+                                            
+                        
+                </div>
+          	</div>  
+            
+            <div class="des_border" id="p_details">
+                <div class="des_t">商品详情</div>
+                <div class="des_con">
+                	<table border="0" align="center" style="width:745px; font-size:14px; font-family:'宋体';" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="265"><img src="p/product7.png" height="412" style="border-radius:20px;"/></td>
+                        <td>
+                        <p style="font-size:20px;color:white">eded</p>
+                        </td>
+                        <td>
+                        	<b>优雅白纱设计感连衣裙</b><br />
+                            【商品规格】：S/M/L<br />
+                            【商品质地】：70%棉 30%聚酯纤维<br />
+                            【商品产地】：中国<br />
+                            【适用人群】：适合女性<br />
+                        </td>
+                      </tr>
+                    </table>
+                    <br>
+                    <h2 style="text-align:center">细节展示</h2><br>
+                
+                    <tr>
+                    <td>  <img src="p/p1.png" height="200px"  style="margin-left:40px"/></td><td>  <img src="p/p2.png"height="200px" style="margin-left:40px" /></td>
+<td>  <img src="p/p3.png" height="200px" style="margin-left:40px"/></td>
+
+                    
+                    </tr>
+                   
+                    
+                </div>
+          	</div>  
+            
+            
+            
+        </div>
+    </div>
+    
+    <!--Begin Footer Begin -->
+   
+    <div class="b_nav">
+    	<dl>                                                                                            
+        	<dt><a href="#">新手上路</a></dt>
+            <dd><a href="#">售后流程</a></dd>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">订购方式</a></dd>
+            <dd><a href="#">隐私声明</a></dd>
+            <dd><a href="#">推荐分享说明</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">配送与支付</a></dt>
+            <dd><a href="#">货到付款区域</a></dd>
+            <dd><a href="#">配送支付查询</a></dd>
+            <dd><a href="#">支付方式说明</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">会员中心</a></dt>
+            <dd><a href="#">资金管理</a></dd>
+            <dd><a href="#">我的收藏</a></dd>
+            <dd><a href="#">我的订单</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">服务保证</a></dt>
+            <dd><a href="#">退换货原则</a></dd>
+            <dd><a href="#">售后服务保证</a></dd>
+            <dd><a href="#">产品质量保证</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">联系我们</a></dt>
+            <dd><a href="#">网站故障报告</a></dd>
+            <dd><a href="#">购物咨询</a></dd>
+            <dd><a href="#">投诉与建议</a></dd>
+        </dl>
+        <img src="p/logo.png" width="320" style="margin-left:-9.5%;margin-top:-3%">
+          <div class="b_tel_bg">
+        <div class="b_tel_bg">
+        	<a href="#" class="b_sh1">新浪微博</a>            
+        	<a href="#" class="b_sh2">腾讯微博</a>
+            <p>
+            服务热线：<br />
+            <span>xxx-xxx-xxxx</span>
+ 
+     </div></div>
+
+    <!--End Footer End -->    
+</div>
+ 
+
+<script src="js/ShopShow.js"></script>
+
+</html>

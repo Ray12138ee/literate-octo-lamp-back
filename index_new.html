@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <style>
+    
+    .fixed-top {
+                display:inline-flex;
+               
+			    top: 0; /* 距离顶部0 */
+						    width: 100%; /* 宽度设置为100% */
+			    background-color: grey; /* 背景颜色 */
+			    height:60px;
+			  
+			    position:fixed;
+			    z-index: 1000;
+			     width%;
+			    align-items:center;
+
+		}
+			.box-gps {       
+		        width: 9%;
+		        height: 100%;
+		        background-color: none;
+		        position: relative;
+		        color:white;
+		    	text-align:center;
+		        font-size:19px;
+		        letter-spacing:0px;
+		    }
+		
+		    .box-gps::after {
+		        content: '';
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 100%;
+		        height: 3px;
+		        background-color: white;
+		        transform: scaleX(0);
+		        transition: transform 0.3s;
+		    }
+		
+		    .box-gps:hover::after {
+		        transform: scaleX(1);
+		    }
+.image-on-top {
+    position: absolute; /* 或使用 fixed 或 sticky */
+    top:-50px;
+    left: 230px;
+    z-index: 10; 
+    /* 较大的值确保图片在最上层 */
+  }
+    
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.min_044d0927.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider_e88acd1b.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>    
+        
+	<script type="text/javascript" src="js/select.js"></script>
+    
+	<script type="text/javascript" src="js/lrscroll.js"></script>
+    
+    <script type="text/javascript" src="js/iban.js"></script>
+    <script type="text/javascript" src="js/fban.js"></script>
+    <script type="text/javascript" src="js/f_ban.js"></script>
+    <script type="text/javascript" src="js/mban.js"></script>
+    <script type="text/javascript" src="js/bban.js"></script>
+    <script type="text/javascript" src="js/hban.js"></script>
+    <script type="text/javascript" src="js/tban.js"></script>
+    
+	<script type="text/javascript" src="js/lrscroll_1.js"></script>
+    
+ 
+</head>
+<body>  
+
+<div class="fixed-top">
+<img src="images/logo_new.png" alt="gongsi1" width=100px style="margin-left:150px">
+
+<a href="home.html" class="box-gps"style="text-decoration:none;margin-left:23.8%;">
+        <p style="margin-top:18px">HOME</p>
+        </a>
+       <a href="home.html" class="box-gps"style="text-decoration:none;margin-left:-3px;">
+        <p style="margin-top:18px">ABOUT US</p>
+        </a>  
+        <a href="huishou.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">RECYCLE</p>
+        </a> 
+         <a href="index.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">FASHION SHOP</p>
+        </a> 
+         <a href="Login.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+      <p style="margin-top:18px">REGISTER/LOGIN</p>
+        </a> 
+        <a href="index_ch.html">
+        <img src="fy.png" alt="翻译" onclick="switchLanguage()" style="width:50px;margin-left:1%"></a>
+   </div>
+
+<!--Begin Header Begin-->
+<div class="soubg">
+	<div class="sou">
+    
+        <span class="fr" style="margin-top:-10px;font-size:15px"><br<br><br><br>
+        	<span class="fl">Hi,<a href="Login.html">sign in</a>&nbsp; <a href="Regist.html" style="color:rgba(97, 191, 173, 0.7);">rregister for free</a>&nbsp;|&nbsp;<a href="Member.html">My Order</a>&nbsp;|</span>
+        	<span class="ss">
+            	<div class="ss_list">
+                	<a href="#">Bookmark</a>
+                    
+                </div>
+                <div class="ss_list">
+                	<a href="#">Customer Service</a>
+                   
+                </div>
+               
+            </span> 
+        </span>
+    </div>
+</div>
+<div class="top">
+    <div class="logo"><img src="p/gongsi.png"  width="358" class="image-on-top"></div>
+    
+    <div class="search">
+    	<form>
+        	<input type="text" value="" class="s_ipt" />
+            <input type="submit" value="搜索" class="s_btn" />
+        </form>            
+                  
+        <span class="fl"><a href="#">2024New</a><a href="#">Batch</a><a href="#">Summer Clothing</a><a href="#">T-Shirts</a><a href="#">Daily Necessities</a><a href="#">Dresses</a></span>
+    </div>
+    
+    <div class="i_car">
+    	<div class="car_t">Cart[ <span>0</span> ]</div>
+        <div class="car_bg">
+       		<!--Begin 购物车未登录 Begin-->
+        	<div class="un_login">Not logged in yet!<a href="Login.html" style="color:"lightgrey;"> Log in now</a> View shopping cart!</div>
+    
+        </div>
+    </div>
+</div>
+<!--End Header End--> 
+
+<!--Begin Menu Begin-->
+<div class="menu_bg">
+	<div class="menu">
+    	<!--Begin 商品分类详情 Begin-->    
+    	<div class="nav">
+        	<div class="nav_t">All Product Categories</div>
+            <div class="leftNav">
+                <ul>      
+                  <li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav1.png" /></span>
+        <span class="fl">Top</span>
+    </div>
+    <div class="zj">
+        <div class="zj_l">
+            <div class="zj_l_c">
+                <h2>Style Classification</h2>
+                <a href="#">Short Sleeve T-shirt</a>|<a href="#">Long Sleeve T-shirt</a>|<a href="#">Shirt</a>|<a href="#">Sweater</a>|<a href="#">Hoodie</a>|
+                <a href="#">Vest</a>|<a href="#">Short Jacket</a>|<a href="#">Long Jacket</a>|<a href="#">Sport Jacket</a>|
+            </div>
+            <div class="zj_l_c">
+                <h2>Collar Style</h2>
+                <a href="#">Round Neck</a>|<a href="#">V-neck</a>|<a href="#">Square Neck</a>|<a href="#">Turtle Neck</a>|<a href="#">Bow Tie Shirt</a>|
+                <a href="#">Collared Shirt</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Season Classification</h2>
+                <a href="#">Spring/Summer Style</a>|<a href="#">Autumn/Winter Style</a>|<a href="#">All Season Style</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Main Color Palette</h2>
+                <a href="#">White</a>|<a href="#">Black</a>|<a href="#">Red</a>|<a href="#">Green</a>|<a href="#">Blue</a>|
+                <a href="#">Yellow</a>|<a href="#">Gray</a>|<a href="#">Pink</a>|<a href="#">Purple</a>|
+                <a href="#">Colorful Styles</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Size</h2>
+                <a href="#">XS</a>|<a href="#">S</a>|<a href="#">M</a>|<a href="#">L</a>|<a href="#">XL</a>|
+                <a href="#">XXL</a>|<a href="#">XXXL</a>|<a href="#">Special Sizes</a>
+            </div>
+        </div>
+<!--         <div class="zj_r"> -->
+<!--             <a href="#"><img src="images/n_img1.jpg" width="236" height="200" /></a> -->
+<!--             <a href="#"><img src="images/n_img2.jpg" width="236" height="200" /></a> -->
+<!--         </div> -->
+    </div>
+</li>
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav2.png" /></span>
+        <span class="fl">Bottom</span>
+    </div>
+    <div class="zj" style="top:-40px;">
+        <div class="zj_l">
+            <div class="zj_l_c">
+                <h2>Pants</h2>
+                <a href="#">Jeans</a>|<a href="#">Casual Pants</a>|<a href="#">Sport Pants</a>|<a href="#">Dress Pants</a>|<a href="#">Shorts</a>|
+                <a href="#">Long Pants</a>|<a href="#">Wide-leg Pants</a>|
+            </div>
+            <div class="zj_l_c">
+                <h2>Skirts</h2>
+                <a href="#">A-line Skirt</a>|<a href="#">Lace Skirt</a>|<a href="#">Pencil Skirt</a>|<a href="#">Maxi Skirt</a>|<a href="#">Mini Skirt</a>|
+                <a href="#">Bodycon Skirt</a>|<a href="#">Ruffle Skirt</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Season Classification</h2>
+                <a href="#">Spring/Summer Style</a>|<a href="#">Autumn/Winter Style</a>|<a href="#">All Season Style</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Length Classification</h2>
+                <a href="#">Long Pants</a>|<a href="#">Capri Pants</a>|<a href="#">Seven-point Pants</a>|<a href="#">Shorts</a>
+            </div>
+            <div class="zj_l_c">
+                <h2>Style Classification</h2>
+                <a href="#">Slim Fit Style</a>|<a href="#">Straight-leg Pants</a>|<a href="#">Wide-leg Style</a>|<a href="#">High-waisted Style</a>|<a href="#">Mid-rise Style</a>
+            </div>
+        </div>
+    </div>
+</li>
+
+                  <li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav3.png" /></span>
+        <span class="fl">Dress</span>
+    </div>
+    <div class="zj" style="top:-80px;">
+        <div class="zj_l">
+            <div class="zj_l_c">
+                <h2>Style</h2>
+                <a href="#">Pencil Skirt</a>|<a href="#">Ruffle Skirt</a>|<a href="#">Mini Skirt</a>|<a href="#">Knee-Length Skirt</a>
+            </div>
+
+            <div class="zj_l_c">
+                <h2>Neckline</h2>
+                <a href="#">Round Neck</a>|<a href="#">V-Neck</a>|<a href="#">Square Neck</a>|<a href="#">Turtleneck</a>
+            </div>
+
+            <div class="zj_l_c">
+                <h2>Style</h2>
+                <a href="#">Simple Style</a>|<a href="#">Sweet Style</a>|<a href="#">Modern Style</a>|<a href="#">Ethnic Style</a>|
+            </div>
+
+            <div class="zj_l_c">
+                <h2>Size</h2>
+                <a href="#">XS</a>|<a href="#">S</a>|<a href="#">M</a>|<a href="#">L</a>|<a href="#">XL</a>
+            </div>
+
+
+        </div>
+
+    </div>
+</li>
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav4.png" /></span>
+        <span class="fl">Women's / Men's </span>
+    </div>
+    <div class="zj" style="top:-120px;">
+        <div class="zj_l">
+            <div class="zj_l_c">
+
+                <div class="zj_l_cc">
+                    <br>
+                    <a href="#" style="font-size:20px;">Men's Clothing</a>
+                    <br>
+                    <a href="#" style="font-size:20px">Women's Clothing</a>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</li>
+
+
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav7.png" /></span>
+        <span class="fl">Bags</span>
+    </div>
+    <div class="zj" style="top:-240px;">
+        <div class="zj_l">
+            <div class="zj_l_c">
+                <h2>Backpacks</h2>
+                <a href="#">Sports Bag</a>|
+                <a href="#">Shoulder Bag</a>|
+                <a href="#">Backpack</a>|
+                <a href="#">Crossbody Bag</a>|
+                <a href="#">Waist Bag</a>|
+                <a href="#">Briefcase</a>|
+                <a href="#">Gym Bag</a>|
+
+            </div>
+
+            <div class="zj_l_c">
+                <h2>Handbags</h2>
+                <a href="#">Clutch</a>|
+                <a href="#">Tote Bag</a>|
+                <a href="#">Shoulder Bag</a>|
+                <a href="#">Handbag</a>|
+                <a href="#">Clutch Bag</a>|
+            </div>
+            <div class="zj_l_c">
+                <h2>Travel Series</h2>
+                <a href="#">Toiletry Bag</a>|
+                <a href="#">Cosmetic Bag</a>|
+                <a href="#">Travel Bag</a>|
+                <a href="#">Storage Bag</a>|
+                <a href="#">Rolling Luggage</a>|
+            </div>
+        </div>
+
+
+</li>
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav8.png" /></span>
+        <span class="fl">Accessories</span>
+
+</li>
+
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav10.png" /></span>
+        <span class="fl">Department Store</span>
+    </div>
+
+</li>
+<li>
+    <div class="fj">
+        <span class="n_img"><span></span><img src="images/nav9.png" /></span>
+        <span class="fl">Bulk Purchase </span>
+    </div>
+
+</li>
+
+                </ul>            
+            </div>
+        </div>  
+        <!--End 商品分类详情 End-->                                                     
+    	<ul class="menu_r">
+    <li><a href="in_en.html">Home</a></li>
+    <li><a href="#">Clothing</a></li>
+    <li><a href="#">Accessories</a></li>
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Bulk Purchase of Old Clothes</a></li>
+    <li style="width:100px"><a href="#">New Arrivals for Spring</a></li>
+</ul>
+
+    
+    </div>
+</div>
+<!--End Menu End--> 
+<div class="i_bg bg_color">
+	<div class="i_ban_bg">
+		<!--Begin Banner Begin-->
+    	<div class="banner">    	
+            <div class="top_slide_wrap">
+                <ul class="slide_box bxslider">
+                    <li><img src="p/feng2.png" width="740" height="401" /></li>
+                    <li><img src="p/feng1.png" width="740" height="401" /></li> 
+                    <li><img src="p/feng3.png" width="740" height="401" /></li> 
+                </ul>	
+                <div class="op_btns clearfix">
+                    <a href="#" class="op_btn op_prev"><span></span></a>
+                    <a href="#" class="op_btn op_next"><span></span></a>
+                </div>        
+            </div>
+        </div>
+        <script type="text/javascript">
+        //var jq = jQuery.noConflict();
+        (function(){
+            $(".bxslider").bxSlider({
+                auto:true,
+                prevSelector:jq(".top_slide_wrap .op_prev")[0],nextSelector:jq(".top_slide_wrap .op_next")[0]
+            });
+        })();
+        </script>
+        <!--End Banner End-->
+        <div class="inews">
+        	<div class="news_t">
+            	<span class="fr"><a href="#">MORE ></a></span>Information Express
+            </div>
+         <ul>
+    <li><span>[ Trend ]</span><a href="#">Latest trends, design inspiration, and styling tips for reusing old clothes</a></li>
+    <li><span>[ News ]</span><a href="#">Fashion Oasis: Exploring the new frontier of sustainable fashion</a></li>
+    <li><span>[ Special Offer ]</span><a href="#">New arrivals from "PUUS"! Buy over 400-30</a></li>
+    <li><span>[ Announcement ]</span><a href="#">Notice about page upgrade maintenance</a></li>
+    <li><span>[ Sharing ]</span><a href="#">Analysis of the "PUUS" founding team and their environmental protection concept</a></li>
+    <li><span>[ News ]</span><a href="#">Our site has reached cooperation with many renowned designers</a></li>
+</ul>
+
+        </div>
+    </div>
+    <!--Begin 热门商品 Begin-->
+    <div class="content mar_10">
+    	<div class="h_l_img">
+    <img src="p/tb-product1.png " width="70">
+        	<div class="img">
+        	<a href="Product_en.html">
+        	
+        	<img src="p/product4.png" width="170" height="188" style="margin-top:-70px" /></a>
+        	</div>
+            <div class="pri_bg">
+                <span class="price fl">￥79.00</span>
+                
+            </div>
+        </div>
+        <div class="hot_pro">        	
+        	<div id="featureContainer">
+                <div id="feature">
+                    <div id="block">
+                        <div id="botton-scroll">
+                            <ul class="featureUL">
+                                <li class="featureBox">
+                                    <div class="box">
+                                    	
+                                       <div class="imgbg">
+    <a href="#"><img src="p/product1.png" width="130" height="130" style="margin-top:8px;margin-left:8px" /></a>
+</div>                                        
+<div class="name">
+    <a href="#">
+        <h2>Linum Blue Design Shirt</h2>
+        Fresh blue tone, showcasing design aesthetics
+    </a>
+</div>
+<div class="price">
+    <font>￥<span>79</span></font> &nbsp; 
+</div>
+</div>
+</li>
+<li class="featureBox">
+<div class="box">
+    
+    <a href="#"><img src="p/product2.png" width="120" height="130" style="margin-top:8px;margin-left:22.4%" /></a>                                 
+    <div class="name">
+        <a href="#">
+            <h2>Printed Rendering Polo Shirt</h2>
+            Fashionable print, vibrant rendering
+        </a>
+    </div>
+    <div class="price">
+        <font>￥<span>79</span></font> &nbsp;
+    </div>
+</div>
+</li>
+<li class="featureBox">
+<div class="box">
+    <a href="#"><img src="p/product3.png" width="130" height="130" style="margin-top:8px;margin-left:22.4%" /></a>                                                             
+    <div class="name">
+        <a href="#">
+            <h2>Dark Mechanical Style Dress</h2>
+            Dark mechanical, avant-garde fashion
+        </a>
+    </div>
+    <div class="price">
+        <font>￥<span>79</span></font> &nbsp; 
+    </div>
+</div>
+</li>
+<li class="featureBox">
+<div class="box">
+
+    <div class="imgbg">
+        <a href="#"><img src="p/product5.png" width="80" height="130" style="margin-top:px;margin-left:22.4%" /></a>                    
+    </div>                                        
+    <div class="name">
+        <a href="#">
+            <h2>Futuristic Suit</h2>
+            Futuristic and trendy
+        </a>
+    </div>
+    <div class="price">
+        <font>￥<span>79</span></font> &nbsp; 
+    </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+                    <a class="h_prev" href="javascript:void();">Previous</a>
+                    <a class="h_next" href="javascript:void();">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--  -->
+    <div class="b_nav">
+    <dl>                                                                                            
+        <dt><a href="#">Getting Started</a></dt>
+        <dd><a href="#">After-sales Process</a></dd>
+        <dd><a href="#">Shopping Process</a></dd>
+        <dd><a href="#">Ordering Methods</a></dd>
+        <dd><a href="#">Privacy Statement</a></dd>
+        <dd><a href="#">Recommendation Sharing Instructions</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">Shipping and Payment</a></dt>
+        <dd><a href="#">Cash on Delivery Areas</a></dd>
+        <dd><a href="#">Shipping Payment Inquiry</a></dd>
+        <dd><a href="#">Payment Methods Description</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">Member Center</a></dt>
+        <dd><a href="#">Fund Management</a></dd>
+        <dd><a href="#">My Favorites</a></dd>
+        <dd><a href="#">My Orders</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">Service Guarantee</a></dt>
+        <dd><a href="#">Return and Exchange Principles</a></dd>
+        <dd><a href="#">After-sales Service Guarantee</a></dd>
+        <dd><a href="#">Product Quality Guarantee</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">Contact Us</a></dt>
+        <dd><a href="#">Website Fault Report</a></dd>
+        <dd><a href="#">Shopping Consultation</a></dd>
+        <dd><a href="#">Complaints and Suggestions</a></dd>
+    </dl>
+    <img src="p/logo.png" width="320" style="margin-left:-9.5%;margin-top:-3%">
+    <div class="b_tel_bg">
+        <div class="b_tel_bg">
+            <a href="#" class="b_sh1">Sina Weibo</a>            
+            <a href="#" class="b_sh2">Tencent Weibo</a>
+            <p>
+            Service Hotline:<br />
+            <span>xxx-xxx-xxxx</span>
+        </div>
+    </div>
+
+
+    <!--End Footer End -->    
+</div>
+
+</body>
+
+
+<!--[if IE 6]>
+<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+</html>

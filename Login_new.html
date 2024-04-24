@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<style>
+    .fixed-top {
+                display:inline-flex;
+               
+			    top: 0; /* 距离顶部0 */
+						    width: 100%; /* 宽度设置为100% */
+			    background-color: grey; /* 背景颜色 */
+			    height:60px;
+			  
+			    position:fixed;
+			    z-index: 1000;
+			     width%;
+			    align-items:center;
+
+		}
+			.box-gps {       
+		        width: 9%;
+		        height: 100%;
+		        background-color: none;
+		        position: relative;
+		        color:white;
+		    	text-align:center;
+		        font-size:19px;
+		        letter-spacing:0px;
+		    }
+		
+		    .box-gps::after {
+		        content: '';
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 100%;
+		        height: 3px;
+		        background-color: white;
+		        transform: scaleX(0);
+		        transition: transform 0.3s;
+		    }
+		
+		    .box-gps:hover::after {
+		        transform: scaleX(1);
+		    }
+.image-on-top {
+    position: absolute; /* 或使用 fixed 或 sticky */
+    top:-50px;
+    left: 230px;
+    z-index: 10; 
+    /* 较大的值确保图片在最上层 */
+  }
+    
+    </style>
+    <!--[if IE 6]>
+    <script src="js/iepng.js" type="text/javascript"></script>
+        <script type="text/javascript">
+           EvPNG.fix('div, ul, img, li, input, a'); 
+        </script>
+    <![endif]-->    
+    <script type="text/javascript" src="js/jquery-1.11.1.min_044d0927.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider_e88acd1b.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>    
+        
+	<script type="text/javascript" src="js/select.js"></script>
+     
+	<script type="text/javascript" src="js/lrscroll.js"></script>
+    
+    <script type="text/javascript" src="js/iban.js"></script>
+    <script type="text/javascript" src="js/fban.js"></script>
+    <script type="text/javascript" src="js/f_ban.js"></script>
+    <script type="text/javascript" src="js/mban.js"></script>
+    <script type="text/javascript" src="js/bban.js"></script>
+    <script type="text/javascript" src="js/hban.js"></script>
+    <script type="text/javascript" src="js/tban.js"></script>
+    
+	<script type="text/javascript" src="js/lrscroll_1.js"></script>
+    
+    
+<title>login</title>
+</head>
+<body>  
+
+<div class="fixed-top">
+<img src="images/logo_new.png" alt="gongsi1" width=100px style="margin-left:150px">
+
+<a href="home.html" class="box-gps"style="text-decoration:none;margin-left:23.8%;">
+        <p style="margin-top:18px">HOME</p>
+        </a>
+       <a href="home.html" class="box-gps"style="text-decoration:none;margin-left:-3px;">
+        <p style="margin-top:18px">ABOUT US</p>
+        </a>  
+        <a href="huishou.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">RECYCLE</p>
+        </a> 
+         <a href="index.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+        <p style="margin-top:18px">FASHION SHOP</p>
+        </a> 
+         <a href="Register.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+      <p style="margin-top:18px">REGISTER/LOGIN</p>
+        </a> 
+        <a href="Login_ch.html">
+        <img src="fy.png" alt="翻译" onclick="switchLanguage()" style="width:50px;margin-left:1%"></a>
+   </div>
+
+
+<!--Begin Header Begin-->
+<div class="soubg">
+	<div class="sou">
+    
+      <span class="fr" style="margin-top:-10px;font-size:14px"><br<br><br><br>
+        	<span class="fl">Hi,<a href="Login.html">sign in</a>&nbsp; <a href="Regist.html" style="color:rgba(97, 191, 173, 0.7);">rregister for free</a>&nbsp;|&nbsp;<a href="Member.html">My Order</a>&nbsp;|</span>
+        	<span class="ss">
+            	<div class="ss_list">
+                	<a href="#">Bookmark</a>
+                    
+                </div>
+                <div class="ss_list">
+                	<a href="#">Customer Service</a>
+                   
+                </div>
+               
+            </span> 
+        </span>
+    </div>
+</div>
+<!--End Header End--> 
+<!--Begin Login Begin-->
+<div class="log_bg">	
+    <div class="top">
+        <div class="logo"><a href="Index.html"><img src="p/logo.png" /></a></div>
+    </div>
+	<div class="login">
+<h1 style="margin-left:19.3%;">Fashion Rebirth</h1>
+    	<div class="log_img"><img src="p/login1.png" width="611"  /></div>
+		<div class="log_c">
+        	<form>
+            <table border="0" style="width:370px; font-size:14px; margin-top:30px;" cellspacing="0" cellpadding="0">
+              <tr height="50" valign="top">
+              	<td width="55">&nbsp;</td>
+                <td>
+                	<span class="fl" style="font-size:24px;">Login</span>
+<span class="fr">Don't have an account? <a href="Regist.html" style="color:rgba(97, 191, 173, 0.99);">Register now</a></span>
+</td>
+</tr>
+<tr height="70">
+<td>Username</td>
+<td><input type="text" value="" class="l_user" /></td>
+</tr>
+<tr height="70">
+<td>Password</td>
+<td><input type="password" value="" class="l_pwd" /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="font-size:12px; padding-top:20px;">
+<span style="font-family:'宋体';" class="fl">
+<label class="r_rad"><input type="checkbox" /></label><label class="r_txt">Remember me</label>
+</span>
+<span class="fr"><a href="Index.html" style="color:rgba(97, 191, 173, 0.5);">Forgot password</a></span>
+</td>
+</tr>
+                </td>
+              </tr>
+              <tr height="60">
+              	<td>&nbsp;</td>
+                <td><input type="submit" value="登录" class="log_btn" /></td>
+              </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+<!--End Login End--></body>
+
+
+</html>
