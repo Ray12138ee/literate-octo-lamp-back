@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    
+    <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                font-family: Arial, sans-serif;
+            }
+            
+/*             导航栏 */
+            .fixed-top {
+                display:inline-flex;
+               
+			    top: 0; /* 距离顶部0 */
+			    left: 4%; /* 距离左侧0 */
+			    width: 100%; /* 宽度设置为100% */
+			    background-color: grey; /* 背景颜色 */
+			    height:60px;
+			  
+			    position:fixed;
+			    z-index: 1000;
+			     width:92%;
+			    align-items:center;
+
+		}
+			.box-gps {       
+		        width: 9%;
+		        height: 100%;
+		        background-color: none;
+		        position: relative;
+		        color:white;
+		    	text-align:center;
+		        font-size:19px;
+		        letter-spacing:0px;
+		    }
+		
+		    .box-gps::after {
+		        content: '';
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 100%;
+		        height: 3px;
+		        background-color: white;
+		        transform: scaleX(0);
+		        transition: transform 0.3s;
+		    }
+		
+		    .box-gps:hover::after {
+		        transform: scaleX(1);
+		    }
+		    
+		    .container {
+	          width: 92%; /* 设置容器的固定宽度 */
+	          margin: 0 auto; /* 水平居中 */
+	          background-color: white; /* 背景颜色 */
+	          padding: 0px; /* 内边距 */
+	          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加一些阴影效果 */
+	          margin-top:60px;
+
+		    
+		    }
+		    .ps{
+		    
+		    margin-left: 16%;
+		    background-color:#FFF;
+		    
+		    }
+		    .ps-txt{
+		    padding:5px;
+		    line-height:1.69;
+		    width:50%;
+		    font-size:17px;
+		    }
+		    
+		    .yy{
+		    margin:0 auto;
+		    width:100%;
+		    
+		    background:rgba(177, 236, 177, 0.469);
+		    
+		    }
+		    .y1{
+		    
+		     font-size:17px;
+		     display:inline-flex;
+		     width:80%;
+		     margin-left:18%;
+		     
+		    }
+		    .input {
+          border-radius: 10px; /* 设置圆角的大小 */
+          border: 1px solid #ccc; /* 设置边框颜色和大小*/
+          width:280px;height:40px; 
+          padding: 5px 10px; /* 内边距可以根据需要调整 */
+          font-size:17px;
+}
+         .input2{
+        border-radius: 10px; /* 设置圆角的大小 */
+          border: 1px solid #ccc; /* 设置边框颜色和大小*/
+          width:95.1px;height:40px; 
+          padding: 5px 10px; /* 内边距可以根据需要调整 */
+          font-size:17px;
+          margin-top:-5px;
+         }
+         .input3{
+         font-size:17px;}
+
+		  .sub{
+		  width:40%;
+		  height:65px;
+		  margin:0 auto;
+		  margin-left:30%;
+		  background-color:rgba(194, 230, 222, 0.231);
+		  border-radius: 10px;
+		   border: 1px solid #ccc;
+		   font-size:20px;
+		   font-weight:bold;
+		   color:#686868;
+		  }
+		  
+		  .sub:hover{
+		  background-color:rgba(194, 230, 222, 0.931);
+
+		  }
+		  .in{ display:inline-flex;}
+		    
+	</style>
+	<body>
+	    
+	    <div class="fixed-top">
+	    <img src="gongsi.png" alt="gongsi1" width=165px style="margin-left:150px">
+	      <a href="home.html" class="box-gps"style="text-decoration:none;margin-left:22%;">
+	            <p style="margin-top:18px">首页</p>
+	            </a>
+	           <a href="home.html" class="box-gps"style="text-decoration:none;margin-left:2px;">
+	            <p style="margin-top:18px">关于我们</p>
+	            </a>  
+	            <a href="huishou.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+	            <p style="margin-top:18px">旧衣回收处</p>
+	            </a> 
+	             <a href="index.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+	            <p style="margin-top:18px">时尚再生坊</p>
+	            </a> 
+	             <a href="Login.html" class="box-gps"style="text-decoration:none;margin-left:5px;">
+	          <p style="margin-top:18px">注册/登录</p>
+	            </a>        </div>
+       
+       <div class="container">
+       <p style="color:white;font-size:8px">1</p>
+       <div class="ps">
+  
+       <h2 style="margin-left:36%">用户须知</h1>
+<!--        用户须知文字部分 -->
+<div class="in">
+       <div class="ps-txt">
+   
+ <h3>回收物品要求：</h3>
+<p style="text-indent:2em;">
+我们接受各种类型的旧衣，但需要注意的是，我们不收太破损、被烧毁、无法修复或无法再利用的衣物。
+请确保所提交的旧衣保持相对完好的成色和质量，并保持清洁程度。<p>
+<h3>回收流程：</h3>
+<p style="text-indent:2em;">
+您可以通过我们的网站提交旧衣的回收申请。
+我们将根据您提供的信息进行确认，并将与您协商取件或送件的具体时间和地点。</p>
+
+<h3>禁止物品：</h3>
+<p style="text-indent:2em;">我们禁止回收涉及侵权、违法、危险以及其他不符合道德伦理的物品。</p>
+
+<h3>环保责任:</h3>
+<p style="text-indent:2em;">为了环境保护和可持续发展，我们鼓励您提交清洁、可回收的旧衣。
+请勿混入无法回收的杂物或与环境保护相悖的物品。</p>
+   </div>
+   <img src="yuyue3.png" width="420" height="520"style="margin-left:3%;margin-top:1%">    
+       
+       
+       
+   </div>
+       <br>
+       <br>
+       </div>
+       
+       
+       
+       
+<!--        下面已经完事 -->
+       <div class="yy"><br>
+       <h2 style="text-align:center;color:#494949">在线预约</h1>
+       
+         <br><div class="y1">
+         <p >预约姓名：</p>
+         <input type="text" name="name" class="input">
+       <p style="margin-left:10%">手机号码：</p>
+         <input type="number" name="number"class="input">          
+        </div>
+       <br>
+       <br><br>
+       <div class="y1">
+     
+<!--        正片开始 -->
+<div class="input3">
+<label for="province">所属省份:</label>
+<select id="province" name="province" onchange="updateCities()" style="border-radius: 10px;width:123px;height:43px;margin-left:10px;margin-top:-8px;border: 1px solid #ccc;"class="input3">
+<option value="beijing">北京市</option>
+<option value="tianjin">天津市</option>
+<option value="shanghai">上海市</option>
+<option value="chongqing">重庆市</option>
+<option value="hebei">河北省</option>
+<option value="shanxi">山西省</option>
+<option value="liaoning">辽宁省</option>
+<option value="jilin">吉林省</option>
+<option value="heilongjiang">黑龙江省</option>
+<option value="jiangsu">江苏省</option>
+<option value="zhejiang">浙江省</option>
+<option value="anhui">安徽省</option>
+<option value="fujian">福建省</option>
+<option value="jiangxi">江西省</option>
+<option value="shandong">山东省</option>
+<option value="henan">河南省</option>
+<option value="hubei">湖北省</option>
+<option value="hunan">湖南省</option>
+<option value="guangdong">广东省</option>
+<option value="guangxi">广西壮族自治区</option>
+<option value="hainan">海南省</option>
+<option value="sichuan">四川省</option>
+<option value="guizhou">贵州省</option>
+<option value="yunnan">云南省</option>
+<option value="xizang">西藏自治区</option>
+<option value="shanxi2">陕西省</option>
+<option value="gansu">甘肃省</option>
+<option value="qinghai">青海省</option>
+<option value="ningxia">宁夏回族自治区</option>
+<option value="xinjiang">新疆维吾尔自治区</option>
+<option value="taiwan">台湾省</option>
+<option value="hongkong">香港特别行政区</option>
+<option value="macau">澳门特别行政区</option>
+</select>
+<label for="city" style="margin-left:10px">城市:</label>
+<select id="city" name="city"style="border-radius: 10px;width:123px;height:43px;margin-left:8px;margin-top:-8px;border: 1px solid #ccc;"class="input3"></select>
+</div>
+<label for="address" style="margin-left:9%">详细地址:</label>
+ <input type="text" name="address" class="input" style="margin-top:-8px;margin-left:12px">
+       </div>
+       <br><br><br>
+  <div class="y1">
+ 
+  
+  <label for="weight">大约重量：</label>
+  <select class="input" name="weight1" style="width:305px;margin-top:-5px;">
+  <option value="" disabled selected style="display:none;"></option>
+  <option value="50kg以下">0-50kg</option>
+  <option value="50-500">50-500kg</option>
+  <option value="500kg-5t">500kg-5t</option>
+  <option value="5t以上">5t以上</option>
+  </select>
+  <label for="address" style="margin-left:10%">上门日期:</label>
+<!-- 又是一个正片开始 -->
+
+
+
+
+<label for="year"></label>
+    <select  class="input2" style="margin-left:9px"id="year" name="year" ">
+      <!-- JavaScript 脚本将自动填充年份 -->
+    </select>
+   
+    <label for="month"></label>
+    <select id="month"class="input2" style="margin-left:9px;" name="month">
+        <option value="1">一月</option>
+		<option value="2">二月</option>
+		<option value="3">三月</option>
+		<option value="4">四月</option>
+		<option value="5">五月</option>
+		<option value="6">六月</option>
+		<option value="7">七月</option>
+		<option value="8">八月</option>
+		<option value="9">九月</option>
+		<option value="10">十月</option>
+		<option value="11">十一月</option>
+		<option value="12">十二月</option>
+		
+    </select>
+   
+    <label for="day"></label>
+    <select id="day"class="input2" style="margin-left:9px" name="day">
+      <!-- JavaScript 脚本将根据选择的月份自动填充日期 -->
+    </select>
+    
+  </div>
+       <br><br><br><br>
+       
+   <input type="submit" value="立即预约！" class="sub" onclick="showSuccessMessage()">
+  <br> <br> <br>
+<div id="successMessage" style="display: none;text-align:center;color:grey;"><div class="in">
+<br>
+<img src="thank.png" width="100">
+<br>
+<h2 style="margin-left:20px"> 预约成功！感谢您的支持</h2></div></div>
+
+       </div>
+   
+   <br>
+   <br>
+   
+  <img src="yuyue2.png" width="70%" style="margin-left:15%"> 
+   
+   <br>
+<br>       </div>
+	    
+	    
+	    
+	    
+
+</div>
+
+	    
+	    <script>
+	      function showSuccessMessage() {
+    document.getElementById('successMessage').style.display = 'block';
+  };
+function updateCities() {
+var provinceSelect = document.getElementById("province");
+var citySelect = document.getElementById("city");
+var province = provinceSelect.value;
+citySelect.innerHTML = "";
+
+var cities = [];
+switch(province) {
+case "beijing":
+cities = ["北京市"];
+break;
+case "tianjin":
+cities = ["天津市"];
+break;
+case "shanghai":
+cities = ["上海市"];
+break;
+case "chongqing":
+cities = ["重庆市"];
+break;
+case "hebei":
+cities = ["石家庄市", "唐山市", "秦皇岛市", "邯郸市", "邢台市", "保定市", "张家口市", "承德市", "沧州市", "廊坊市", "衡水市"];
+break;
+case "shanxi":
+cities = ["太原市", "大同市", "阳泉市", "长治市", "晋城市", "朔州市", "晋中市", "运城市", "忻州市", "临汾市", "吕梁市"];
+break;
+// 继续添加其他省份的城市
+case "guangdong":
+      cities = ["广州市", "深圳市", "珠海市", "汕头市", "韶关市", "佛山市", "江门市", "湛江市", "茂名市", "肇庆市", "惠州市", "梅州市", "汕尾市", "河源市", "阳江市", "清远市", "东莞市", "中山市", "潮州市", "揭阳市", "云浮市"];
+      break;
+    case "hunan":
+      cities = ["长沙市", "株洲市", "湘潭市", "衡阳市", "邵阳市", "岳阳市", "常德市", "张家界市", "益阳市", "郴州市", "永州市", "怀化市", "娄底市", "湘西土家族苗族自治州"];
+      break;
+    case "guangxi":
+      cities = ["南宁市", "柳州市", "桂林市", "梧州市", "北海市", "防城港市", "钦州市", "贵港市", "玉林市", "百色市", "贺州市", "河池市", "来宾市", "崇左市"];
+      break;
+    case "hainan":
+      cities = ["海口市", "三亚市", "三沙市", "儋州市", "五指山市", "琼海市", "文昌市", "万宁市", "东方市", "定安县", "屯昌县", "澄迈县", "临高县", "白沙黎族自治县", "昌江黎族自治县", "乐东黎族自治县", "陵水黎族自治县", "保亭黎族苗族自治县", "琼中黎族苗族自治县"];
+      break;
+      
+      case "fujian":
+      cities = ["福州市", "厦门市", "莆田市", "三明市", "泉州市", "漳州市", "南平市", "龙岩市", "宁德市"];
+      break;
+    case "jiangxi":
+      cities = ["南昌市", "景德镇市", "萍乡市", "九江市", "新余市", "鹰潭市", "赣州市", "吉安市", "宜春市", "抚州市", "上饶市"];
+      break;
+    case "shandong":
+      cities = ["济南市", "青岛市", "淄博市", "枣庄市", "东营市", "烟台市", "潍坊市", "济宁市", "泰安市", "威海市", "日照市", "莱芜市", "临沂市", "德州市", "聊城市", "滨州市", "菏泽市"];
+      break;
+    case "henan":
+      cities = ["郑州市", "开封市", "洛阳市", "平顶山市", "安阳市", "鹤壁市", "新乡市", "焦作市", "濮阳市", "许昌市", "漯河市", "三门峡市", "南阳市", "商丘市", "信阳市", "周口市", "驻马店市", "济源市"];
+      break;
+      case "heilongjiang":
+      cities = ["哈尔滨市", "齐齐哈尔市", "鸡西市", "鹤岗市", "双鸭山市", "大庆市", "伊春市", "佳木斯市", "七台河市", "牡丹江市", "黑河市", "绥化市", "大兴安岭地区"];
+      break;
+    case "jiangsu":
+      cities = ["南京市", "无锡市", "徐州市", "常州市", "苏州市", "南通市", "连云港市", "淮安市", "盐城市", "扬州市", "镇江市", "泰州市", "宿迁市"];
+      break;
+      case "zhejiang":
+      cities = ["杭州市", "宁波市", "温州市", "嘉兴市", "湖州市", "绍兴市", "金华市", "衢州市", "舟山市", "台州市", "丽水市"];
+      break;
+    case "anhui":
+      cities = ["合肥市", "芜湖市", "蚌埠市", "淮南市", "马鞍山市", "淮北市", "铜陵市", "安庆市", "黄山市", "滁州市", "阜阳市", "宿州市", "六安市", "亳州市", "池州市", "宣城市"];
+      break;
+    case "xizang":
+      cities = ["拉萨市", "日喀则市", "昌都市", "林芝市", "山南市", "那曲市", "阿里地区"];
+      break;
+    case "xinjiang":
+      cities = ["乌鲁木齐市", "克拉玛依市", "吐鲁番市", "哈密市", "昌吉回族自治州", "博尔塔拉蒙古自治州", "巴音郭楞蒙古自治州", "阿克苏地区", "克孜勒苏柯尔克孜自治州", "喀什地区", "和田地区", "伊犁哈萨克自治州", "塔城地区", "阿勒泰地区", "自治区直辖县级行政单位"];
+      break;
+    case "sichuan":
+      cities = ["成都市", "自贡市", "攀枝花市", "泸州市", "德阳市", "绵阳市", "广元市", "遂宁市", "内江市", "乐山市", "南充市", "眉山市", "宜宾市", "广安市", "达州市", "雅安市", "巴中市", "资阳市", "阿坝藏族羌族自治州", "甘孜藏族自治州", "凉山彝族自治州"];
+      break;
+    case "qinghai":
+      cities = ["西宁市", "海东市", "海北藏族自治州", "黄南藏族自治州", "海南藏族自治州", "果洛藏族自治州", "玉树藏族自治州", "海西蒙古族藏族自治州"];
+      break;
+    case "gansu":
+      cities = ["兰州市", "嘉峪关市", "金昌市", "白银市", "天水市", "武威市", "张掖市", "平凉市", "酒泉市", "庆阳市", "定西市", "陇南市", "临夏回族自治州", "甘南藏族自治州"];
+      break;
+    case "neimenggu":
+      cities = ["呼和浩特市", "包头市", "乌海市", "赤峰市", "通辽市", "鄂尔多斯市", "呼伦贝尔市", "巴彦淖尔市", "乌兰察布市", "兴安盟", "锡林郭勒盟", "阿拉善盟"];
+      break;
+      case "hubei":
+      cities = ["武汉市", "黄石市", "十堰市", "宜昌市", "襄阳市", "鄂州市", "荆门市", "孝感市", "荆州市", "黄冈市", "咸宁市", "随州市", "恩施土家族苗族自治州", "神农架林区"];
+      break;
+    case "guizhou":
+      cities = ["贵阳市", "六盘水市", "遵义市", "安顺市", "毕节市", "铜仁市", "黔西南布依族苗族自治州", "黔东南苗族侗族自治州", "黔南布依族苗族自治州"];
+      break;
+    case "yunnan":
+      cities = ["昆明市", "曲靖市", "玉溪市", "保山市", "昭通市", "丽江市", "普洱市", "临沧市", "德宏傣族景颇族自治州", "怒江傈僳族自治州", "迪庆藏族自治州", "大理白族自治州", "楚雄彝族自治州", "红河哈尼族彝族自治州", "文山壮族苗族自治州", "西双版纳傣族自治州"];
+      break;
+    case "shanxi":
+      cities = ["西安市", "铜川市", "宝鸡市", "咸阳市", "渭南市", "延安市", "汉中市", "榆林市", "安康市", "商洛市"];
+      break;
+    case "ningxia":
+      cities = ["银川市", "石嘴山市", "吴忠市", "固原市", "中卫市"];
+      break;
+    case "taiwan":
+      cities = ["台北市", "新北市", "桃园市", "台中市", "台南市", "高雄市", "基隆市", "新竹市", "嘉义市"];
+      break;
+    case "hongkong":
+      cities = ["中西區", "灣仔區", "東區", "南區", "油尖旺區", "深水埗區", "九龍城區", "黃大仙區", "觀塘區", "荃灣區", "屯門區", "元朗區", "北區", "大埔區", "西貢區", "沙田區", "葵青區", "離島區"];
+      break;
+    case "macau":
+      cities = ["花地瑪堂區", "花王堂區", "望德堂區", "大堂區", "風順堂區", "嘉模堂區", "路氹填海區"];
+      break;
+      
+      
+}
+
+for (var i = 0; i < cities.length; i++) {
+var option = document.createElement("option");
+option.text = cities[i];
+citySelect.add(option);
+}
+}
+
+
+// JavaScript 代码用于自动填充年份并处理日期
+    const yearSelect = document.getElementById('year');
+    const monthSelect = document.getElementById('month');
+    const daySelect = document.getElementById('day');
+   
+    for (let i = 2024; i <= 2029; i++) {
+      const option = document.createElement('option');
+      option.textContent = i;
+      option.value = i;
+      yearSelect.appendChild(option);
+    }
+   
+    monthSelect.addEventListener('change', function() {
+      const daysInMonth = new Date(yearSelect.value, this.value, 0).getDate();
+      daySelect.innerHTML = ''; // 清空之前的选项
+      for (let i = 1; i <= daysInMonth; i++) {
+        const option = document.createElement('option');
+        option.textContent = i;
+        option.value = i;
+        daySelect.appendChild(option);
+      }
+    });
+   
+    // 初始化日期下拉菜单
+    window.addEventListener('load', function() {
+      const today = new Date();
+      const currentYear = today.getFullYear();
+      if (currentYear >= 2024 && currentYear <= 2029) {
+        yearSelect.value = currentYear;
+      } else {
+        yearSelect.value = 2024;
+      }
+      monthSelect.value = today.getMonth() + 1;
+      monthSelect.dispatchEvent(new Event('change')); // 触发月份下拉列表的change事件以初始化日期
+    });
+</script>
+	    
+	    
+	    
+	</body>
+		    
+		    
+	</html>	    
+		    
+		    
+		    
+		    
+
